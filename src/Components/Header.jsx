@@ -1,8 +1,7 @@
 export const Header = () => {
-  return (
-    <header className="header">
-     <img className="size-4" src="/logo.svg" alt="" />
-    
-    </header>
-  );
+    return (
+        <header className="p-2.5">
+            <img src="/logo.svg" alt="" />
+        </header>
+    );
 }
