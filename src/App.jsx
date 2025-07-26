@@ -1,9 +1,11 @@
-import { Header } from "./Components/Header";
+
+import { Home } from "./Pages/home";
 
 export const App = () => {
   return (
     <div className="app">
-      <Header />
+      <Home />
+
     </div>
   );
 }
