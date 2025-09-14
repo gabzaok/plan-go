@@ -2,15 +2,9 @@ import { Header } from "../Components/Header";
 
 export const Home = () => {
   return (
-    <div
-      style={{ backgroundImage: "url('/background.jpg')" }}
-      className="h-screen bg-cover bg-center"
-    >
+    <div>
       <Header />
-      <div
-        className="flex h-[calc(100vh-66px)] flex-col items-center justify-center gap-48"
-        style={{ fontFamily: "Poppins, sans-serif" }}
-      >
+      <div className="flex h-[calc(100vh-66px)] flex-col items-center justify-center gap-48">
         <div className="flex gap-10">
           <div className="flex">
             <div className="flex items-center gap-6">
