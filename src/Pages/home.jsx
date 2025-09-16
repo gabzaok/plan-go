@@ -1,6 +1,6 @@
 import { Header } from "../Components/Header";
 
-export const Home = () => {
+export const Home = ({ setIsShowForm }) => {
   return (
     <div>
       <Header />
@@ -33,11 +33,8 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* <button className="ml-35 rounded-3xl bg-[#FFA53B] px-11 py-3 text-xl font-normal text-black">
-          CRIAR ROTEIRO
-        </button> */}
-
         <button
+          onClick={() => setIsShowForm(true)}
           type="submit"
           class="group relative isolate z-10 ml-35 flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-gray-50 px-4 py-2 text-lg shadow-xl before:absolute before:inset-0 before:-z-10 before:-translate-x-full before:bg-[#FFA53B] before:transition-transform before:duration-500 before:ease-in-out before:content-[''] hover:text-black hover:before:translate-x-0 lg:font-normal"
         >
