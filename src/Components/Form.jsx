@@ -1,6 +1,24 @@
+import { useState } from "react";
 import { Menu } from "./Form/menu";
 
 export const Form = ({ setIsShowForm }) => {
+  const [inputDestination, setInputDestination] = useState("");
+
+  const [inputActivity, setInputActivity] = useState("");
+
+  const [inputDate, setInputDate] = useState("");
+  const [inputHour, setInputHour] = useState("");
+  const statesProps = {
+    setInputDestination,
+    setInputActivity,
+    setInputDate,
+    setInputHour,
+    inputDestination,
+    inputActivity,
+    inputDate,
+    inputHour,
+  };
+
   return (
     <div>
       <button
@@ -19,7 +37,7 @@ export const Form = ({ setIsShowForm }) => {
 
       <div className="flex h-screen items-center justify-center">
         <div className="flex rounded-3xl bg-[#1C262F]/60 shadow-[0_4px_10px_rgba(0,0,0,0.25)] shadow-[#000000]">
-          <Menu />
+          <Menu statesProps={statesProps} />
 
           <div className="w-full p-3">
             <header className="flex flex-col items-center justify-center p-3 text-white">
@@ -36,6 +54,11 @@ export const Form = ({ setIsShowForm }) => {
                   ROTEIROS
                 </h1>
               </header>
+
+              <div>
+                <h1>TESTE</h1>
+                {inputDestination}
+              </div>
             </div>
           </div>
         </div>
