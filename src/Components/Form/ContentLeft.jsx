@@ -1,9 +1,18 @@
+import { useEffect } from "react";
 import { INPUTS } from "../../constants/inputs";
 import { useForms } from "../../hooks/useForms";
 
 export const ContentLeft = ({ statesProps }) => {
   const { handleInputChange, saveActivities } = useForms(statesProps);
 
+  // Set default values when the component mounts
+  // TODO: DELETE LATER
+  useEffect(() => {
+    statesProps.setFormDestination(INPUTS[0].defaultValue);
+    statesProps.setFormActivity(INPUTS[1].defaultValue);
+    statesProps.setFormDate(INPUTS[2].defaultValue);
+    statesProps.setFormHour(INPUTS[3].defaultValue);
+  }, []); // Empty dependency array ensures this runs only once on mount
   return (
     <div className="flex w-md flex-col gap-3 rounded-3xl bg-[#131A23] p-3 shadow-[0_4px_10px_rgba(0,0,0,0.25)] shadow-[#000000]">
       <header className="flex items-center justify-center gap-3 p-3">
