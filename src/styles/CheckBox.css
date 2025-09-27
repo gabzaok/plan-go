@@ -1,0 +1,57 @@
+/* Checkbox customizado */
+.custom-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: background 0.3s ease;
+}
+
+/* efeito do fundo quando marcado */
+.custom-checkbox:checked {
+  background: #ffa53b;
+}
+
+/* traço do check */
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  margin-bottom: 1px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: scale(0) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* animação aparecendo */
+.custom-checkbox:checked::after {
+  transform: scale(1) rotate(45deg);
+}
+
+/* label riscado com animação */
+.custom-checkbox + label {
+  position: relative;
+  color: #fefce8;
+  transition: color 0.3s ease;
+}
+
+/* a linha começa invisível */
+.custom-checkbox + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 0;
+  background: #d3c8de;
+  transition: width 0.4s ease;
+}
+
+/* quando marcado → linha cresce */
+.custom-checkbox:checked + label {
+  color: #d3c8de;
+}
+
+.custom-checkbox:checked + label::after {
+  width: 100%;
+}
