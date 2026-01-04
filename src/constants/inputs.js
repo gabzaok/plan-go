@@ -1,33 +1,28 @@
 export const INPUTS = [
   {
-    defaultValue: "São Luís - MA",
+    name: "destination",
     icon: "/add location.svg",
     placeholder: "Ex: São Luís - MA",
     type: "text",
     label: "Adicionar Destino",
-    id: "inputDestination",
   },
   {
     icon: "/add actv.svg",
-    defaultValue: "Visitar o Centro Histórico",
+    name: "activity",
     placeholder: "Ex: Visitar o Centro Histórico",
     type: "text",
     label: "Adicionar Atividade",
-    id: "inputActivity",
   },
   {
-    defaultValue: new Date().toISOString().split("T")[0],
+    name: "date",
     icon: "/add date.svg",
-
     type: "date",
     label: "Adicionar Data",
-    id: "inputDate",
   },
   {
     icon: "/add time.svg",
-    defaultValue: "12:00",
+    name: "hour",
     type: "time",
     label: "Adicionar Hora",
-    id: "inputHour",
   },
 ];

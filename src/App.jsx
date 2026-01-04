@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Home } from "./Pages/home";
-import { Form } from "./Components/Form";
+import { MainContent } from "./Components/MainContent";
+import "./App.css";
 
 export const App = () => {
   const [isShowForm, setIsShowForm] = useState(false);
@@ -10,7 +11,7 @@ export const App = () => {
       className="h-screen bg-cover bg-center"
     >
       {isShowForm ? (
-        <Form setIsShowForm={setIsShowForm} />
+        <MainContent setIsShowForm={setIsShowForm} />
       ) : (
         <Home setIsShowForm={setIsShowForm} />
       )}

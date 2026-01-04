@@ -3,3 +3,38 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.activities-scroll {
+  max-height: calc(95vh - 150px);
+  padding-right: 6px;
+}
+
+/* Chrome, Edge, Safari */
+.activities-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activities-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activities-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 165, 59, 0.4);
+  border-radius: 999px;
+}
+
+/* Firefox */
+.activities-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 165, 59, 0.4) transparent;
+}
+
+.activities-scroll::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px;
+  width: 2px;
+  background-color: rgba(19, 26, 35, 0.6);
+}
